@@ -5,7 +5,8 @@ import Calculator from "./projects/project-04/Calculator"
 import ToggleBgColor from "./projects/project-05/ToggleBgColor"
 import HiddenSearchBar from "./projects/project-06/HiddenSearchBar"
 import Testomonial from "./projects/project-07/Testomonial"
-
+import Accordion from "./projects/project-08/Accordion"
+import { accordionData } from "./projects/project-08/accordionData"
 function App() {
 
   return (
@@ -16,7 +17,12 @@ function App() {
     {/* <Calculator/> */}
     {/* <ToggleBgColor/> */}
     {/* <HiddenSearchBar/> */}
-    <Testomonial/>
+    {/* <Testomonial/> */}
+    <div id="accordion">
+      {accordionData.map(({title,content}) => (
+        <Accordion title = {title}  content = {content}/>
+      ))}
+    </div>
     </>
   )
 }
